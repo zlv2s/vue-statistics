@@ -3,11 +3,13 @@
 @import "mixins";
 @import "colors";
 
-$base-font-family: 'Source Sans Pro',
-'Helvetica Neue',
-Helvetica,
-Arial,
-sans-serif;
+// $base-font-family: 'Source Sans Pro',
+// 'Helvetica Neue',
+// Helvetica,
+// Arial,
+// sans-serif;
+
+$base-font-family: 'Maven Pro', 'Noto Sans SC', sans-serif;
 $heading-font-family: $base-font-family;
 $base-font-size: rem(16);
 $base-line-height: 1.3;
