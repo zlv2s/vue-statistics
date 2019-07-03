@@ -4,7 +4,7 @@
       <span class="icon">
         <i class="fa fa-cloud-download"></i>
       </span>
-      npm statics
+      npm statistics
     </span>
   </div>
 </template>
