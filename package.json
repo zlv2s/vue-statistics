@@ -8,9 +8,16 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@nextindex/next-scss": "^1.2.1",
+    "axios": "^0.19.0",
+    "chart.js": "^2.8.0",
     "core-js": "^2.6.5",
+    "moment": "^2.24.0",
+    "normalize.css": "^8.0.1",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.3"
+    "vue-chartjs": "^3.4.2",
+    "vue-router": "^3.0.3",
+    "vuejs-datepicker": "^1.5.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",

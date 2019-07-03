@@ -1,29 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <c-header></c-header>
     <router-view/>
+    <c-footer></c-footer>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import CHeader from '_c/Header'
+import CFooter from '_c/Footer'
+export default {
+  components: {
+    CHeader,
+    CFooter
+  }
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+</script>
+
+<style lang="scss">
+.Cookie__button {
+  background: color(robin-egg-blue) !important;
+  @include hover-active-states() {
+    background: darken(color(robin-egg-blue), 10%) !important;
   }
 }
 </style>
