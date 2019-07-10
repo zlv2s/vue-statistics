@@ -2,7 +2,7 @@
   <div class="Header">
     <span class="Header__logo">
       <span class="icon">
-        <i class="fa fa-cloud-download"></i>
+        <span class="iconfont icon-downloadfromthecloud"></span>
       </span>
       npm statistics
     </span>
@@ -23,8 +23,10 @@ export default {}
     font-size: 40px;
     font-weight: 600;
     color: #4f5566;
-    .icon {
+    .icon,
+    .iconfont {
       color: #00c4c9;
+      font-size: 40px;
       margin-right: 10px;
     }
   }

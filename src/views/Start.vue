@@ -8,12 +8,12 @@
           placeholder="npm package name"
           type="”search”"
           v-model="inputPackage"
-        >
+        />
         <button @click="requestData" class="Search__button">
-          <i class="fa fa-search"></i>
+          <span class="iconfont icon-xingtaiduICON_sousuo--"></span>
         </button>
         <span @click.prevent="toggleSettings" class="Search__icon">
-          <i class="fa fa-calendar"></i>
+          <span class="iconfont icon-rili"></span>
         </span>
       </div>
 
@@ -24,6 +24,7 @@
           placeholder="Start Date"
           v-model="periodStart"
         ></datepicker>
+        <span class="iconfont icon-hengxian"></span>
         <datepicker
           input-class="Search__input"
           name="end-date"
@@ -33,7 +34,7 @@
       </div>
 
       <div class="error-message" v-if="showError">{{ errorMessage }}</div>
-      <hr>
+      <hr />
       <div class="loading" v-if="loading">
         🔧 Generating Charts ...
         <div class="sk-cube-grid">
@@ -66,7 +67,7 @@
             <span>{{ formatShowPeriod }}</span>
           </h2>
         </div>
-        <hr>
+        <hr />
         <div class="Chart__content">
           <line-chart :chart-data="downloads" :chart-labels="labels" v-if="loaded"></line-chart>
         </div>
@@ -80,7 +81,7 @@
             <span>{{ formatShowPeriod }}</span>
           </h2>
         </div>
-        <hr>
+        <hr />
         <div class="Chart__content">
           <line-chart :chart-data="downloadsWeek" :chart-labels="labelsWeek" v-if="loaded"></line-chart>
         </div>
@@ -94,7 +95,7 @@
             <span>{{ formatShowPeriod }}</span>
           </h2>
         </div>
-        <hr>
+        <hr />
         <div class="Chart__content">
           <line-chart :chart-data="downloadsMonth" :chart-labels="labelsMonth" v-if="loaded"></line-chart>
         </div>
@@ -108,7 +109,7 @@
             <span>{{ formatShowPeriod }}</span>
           </h2>
         </div>
-        <hr>
+        <hr />
         <div class="Chart__content">
           <bar-chart :chart-data="downloadsYear" :chart-labels="labelsYear" v-if="loaded"></bar-chart>
         </div>
@@ -315,7 +316,9 @@ hr {
     border-radius: 0;
     cursor: pointer;
     text-align: center;
-    font-size: rem(21);
+    .iconfont {
+      font-size: rem(21);
+    }
     font-weight: 600;
     color: #fff;
     background: color(robin-egg-blue);
@@ -324,7 +327,9 @@ hr {
     }
   }
   @include has(icon) {
-    font-size: rem(20);
+    .iconfont {
+      font-size: rem(20);
+    }
     width: rem(40);
     height: rem(40);
     line-height: rem(40);
@@ -341,7 +346,8 @@ hr {
     padding: rem(20) 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    align-items: center;
+    // justify-content: center;
     .vdp-datepicker + .vdp-datepicker {
       margin-left: 1.25rem;
       flex: 1;
